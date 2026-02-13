@@ -1,0 +1,5 @@
+{
+  "name": "PicoZapZap Frontend",
+  "description": "A lightweight web messenger designed to pair with Raspberry Pi Pico W devices, featuring real-time polling and message history.",
+  "requestFramePermissions": []
+}
