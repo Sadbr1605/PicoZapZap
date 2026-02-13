@@ -1,24 +1,23 @@
 
 # PicoZapZap
 
-PicoZapZap é um mensageiro simples para Raspberry Pi Pico W (BitDogLab v7) em MicroPython. Este repositório contém o frontend da aplicação.
-
-## Estrutura do Projeto
-- `frontend/`: Aplicação React + Vite + TypeScript.
+Frontend para o mensageiro PicoZapZap (Raspberry Pi Pico W).
 
 ## Deploy na Vercel
-Para realizar o deploy desta parte do projeto na Vercel:
-1. Conecte seu repositório GitHub à Vercel.
-2. Nas configurações do projeto, defina o **Root Directory** como `frontend`.
-3. O comando de Build deve ser `npm run build`.
-4. O diretório de saída deve ser `dist`.
+Para evitar a "tela branca", certifique-se de que os arquivos estão na **raiz** do projeto ou configure o **Root Directory** corretamente na Vercel.
 
-## Próximos Passos
-O backend (Vercel Serverless Functions + Firestore) será fornecido no **PROMPT 2/2**. Uma vez que o backend for adicionado na pasta `api/` na raiz ou dentro de `frontend/api`, as chamadas de mesma origem (`/api/...`) funcionarão automaticamente.
+1. Conecte seu repositório.
+2. Se você moveu os arquivos para uma pasta `frontend/`, defina **Root Directory** como `frontend`.
+3. Se os arquivos estão na raiz (como este exemplo), deixe o Root Directory como padrão (`./`).
+4. Framework Preset: **Other** ou **Vite**.
+5. Build Command: `npm run build`.
+6. Output Directory: `dist`.
 
-## Instalação Local
-```bash
-cd frontend
-npm install
-npm run dev
-```
+## Estrutura Atual
+Esta versão consolidou os arquivos na raiz para garantir compatibilidade imediata com o ambiente de visualização e deploy simplificado.
+
+- `index.html`: Ponto de entrada.
+- `index.tsx`: Renderização React.
+- `App.tsx`: Lógica principal.
+- `style.css`: Estilos.
+- `api.ts`: Comunicação com o backend (Prompt 2).
